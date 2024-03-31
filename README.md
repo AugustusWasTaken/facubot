@@ -25,6 +25,7 @@ Para que el bot loguee correctamente se debe crear un archivo `config.json` espe
 - [x] Agregar `/registrar_parcial` y `/registrar_final`
 - [ ] Agregar funcionalidad de resúmenes -> `/resumen` y `/registrar_resumen`
 - - [ ] Buscado específico de temas: `/resumen [materia] [tema (opcional)]`
+- [ ] Arreglar los tags de los usuarios, porque discord cambió los tags por usernames:
 - [x] Mostrar todos los finales y examenes al hacer una query
 - - ~~[ ] Interacción con el usuario con botones~~
 - [ ] Agregar buscado por acrónimos comunes para materias (IPI, PI, IO, IPOO, POO...)
