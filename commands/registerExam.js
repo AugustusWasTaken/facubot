@@ -59,8 +59,9 @@ module.exports = {
             const attachedURL = getOption('archivo')['attachment']['url'];
 
             let dateString = '0';
-            if (getOption('fecha')) {
-                dateString = getOption('fecha')['value'] + '/';
+            if (getOption('año')) {
+                const year = getOption('año')['value'];
+                dateString = `${year}-01-01T01:01`;
             }
             const date = new Date(dateString);
             if (!date instanceof Date || isNaN(date)) {
