@@ -62,7 +62,7 @@ module.exports = {
             let dateString = '0';
             if (getOption('año')) {
                 const year = getOption('año')['value'];
-                dateString = `${year}-05-05`;
+                dateString = `${year}-01-01T01:01`;
             }
             const date = new Date(dateString);
             if (!date instanceof Date || isNaN(date)) {
