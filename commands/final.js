@@ -62,10 +62,10 @@ module.exports = {
             const finalUploadUser = recordInfoUtils.getUserWhoUploaded(final);
             const replyMessage = 
                 (year) ?
-                `${bold(fullSubjectName.toUpperCase())}\nEncontré un final del ${bold(datePassed.format('YYYY'))}! Ahora ponete a estudiar. Subido por ${inlineCode(finalUploadUser)}.` :
+                `${bold(fullSubjectName.toUpperCase())}\nEncontré un final del ${finalYear}! Ahora ponete a estudiar. Subido por ${inlineCode(finalUploadUser)}.` :
                 (finalYear < 2010) ?
                 `${bold(fullSubjectName.toUpperCase())}\nAgarré un final al azar de andá a saber cuándo, ahora ponete a estudiar. Subido por ${inlineCode(finalUploadUser)}.` :
-                `${bold(fullSubjectName.toUpperCase())}\nAgarré un final al azar. Este es del ${finalYear}, ahora ponete a estudiar. Subido por ${inlineCode(finalUploadUser)}.`;
+                `${bold(fullSubjectName.toUpperCase())}\nPedazo de boliviano, Agarré un final al azar. Este es del ${finalYear}, ahora ponete a estudiar. Subido por ${inlineCode(finalUploadUser)}.`;
 
                 
             await interaction.deferReply();

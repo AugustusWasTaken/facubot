@@ -43,7 +43,7 @@ const registerFinal = async (subject, attachmentURL, date, interaction) => {
         logInfo(`Added final for subject ${subjectMatched.name} to the database.`);
 
         // interaction.deferReply();
-        interaction.reply(`Diganle gracias a ${interaction.user} que agregó un final de ${bold(subjectMatched.name)} a la base de datos. 🎉`);
+        interaction.reply(`${interaction.user} agregó un final de ${bold(subjectMatched.name)} a la base de datos. Gracias! 🥂`);
     } catch (error) {
         logError(`Info: ${error}, command: /registrar_final`);
         interaction.reply({ content: `Hubo un error al registrar el final, ${interaction.user}: ${error}`, ephemeral: true });
@@ -66,13 +66,13 @@ module.exports = {
             }
             const date = new Date(dateString);
             if (!date instanceof Date || isNaN(date)) {
-                throw InvalidFinalDateError();
+                throw InvalidFinalDateError;
             }
     
-            await registerFinal(subject, attachedURL, date, interaction);
+            registerFinal(subject, attachedURL, date, interaction);
         } catch (error) {
             logError(`Info: '${error}'`);
-            throw InvalidFieldError();
+            throw InvalidFieldError;
         }
     },
 };

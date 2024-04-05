@@ -33,7 +33,7 @@ const findMatch = (wanted, all) => {
     // if the user inputs 'II' it will search for the first match, being 'I',
     // therefore registering the wrong subject.
     // it should be enough having I, II and III though.
-    const wantedWithRomanLetters = wanted.replace('1', 'I').replace('2', 'II').replace('3', 'III');
+    const wantedWithRomanLetters = wanted.replace('1', 'I').replace('2', 'II').replace('3', 'III').replace('uno','I').replace('dos','II');
     const matches = stringSimilarity.findBestMatch(wantedWithRomanLetters.toString(), all);
     const nameMatched = matches.bestMatch.target;
     const matchRating = matches.bestMatch.rating;
